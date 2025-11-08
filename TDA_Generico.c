@@ -30,7 +30,7 @@ int InsertOrd(tVector *v, void *elemento, int cmp(const void*, const void*))
 {
     if(v->ce == v->save) /* Si la cantidad disponible es igual a la cantidad guardada */
         return FALSO;
-    if(v->ce == 0)
+    if(v->save == 0)
         {
             memcpy(v->v, elemento, v->tam);
             v->save++;
